@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection properties -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hotel_management</property>
+        <property name="hibernate.connection.username">root</property>
+
+        <!-- SQL dialect for MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Automatic schema generation -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Show SQL in console -->
+        <property name="hibernate.show_sql">false</property>
+        <mapping class="org.example.Entity.RoomCategory"/>
+        <mapping class="org.example.Entity.RoomDetail"/>
+        <mapping class="org.example.Entity.CustomerRecords"/>
+        <mapping class="org.example.Entity.ReservationDetails"/>
+        <mapping class="org.example.Entity.BookingDetails"/>
+        <mapping class="org.example.Entity.Billing"/>
+    </session-factory>
+
+</hibernate-configuration>
